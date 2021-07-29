@@ -12,17 +12,25 @@ public class Main {
 
         //Product.displayStock();
         //Product.displayProduckByQty();
-        Product.displayProduckByType();
+        Product.displayProductByType();
         System.out.println("--------------------");
-        Product.displayProduckByPrice();
+        Product.displayProductByPrice();
         System.out.println("---------------------");
         Product.displayCheapest();
         System.out.println("----------------------");
-        Product.searchByMark("cbon");
-        Product.searchByMark("plop");
+        Product.searchByBrand("cbon");
+        Product.searchByBrand("plop");
         System.out.println("-----------------------");
         Product.searchByName("Camion");
         Product.searchByName("plop");
+        System.out.println("-----------------------");
+        Product.searchByName("Camion");
+        Product.addStock("camion",15);
+        Product.searchByName("Camion");
+        Product.addStock("plop", 150);
+        System.out.println("------------------------");
+        Product.deleteProduct("camion");
+        Product.searchByName("camion");
     }
 
 
