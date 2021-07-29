@@ -11,7 +11,7 @@ public class Product {
     private final ProductType type;
     private int stock;
 
-    public Product(String name, double price, String brand, ProductType type, int stock) {
+    private Product(String name, double price, String brand, ProductType type, int stock) {
         this.name = name;
         this.price = price;
         this.brand = brand;
@@ -202,5 +202,12 @@ public class Product {
         return products.stream().anyMatch(product -> product.getName()
                 .toLowerCase(Locale.ROOT)
                 .equals(n.toLowerCase(Locale.ROOT)));
+    }
+
+    public static void generateStock() {
+        Product.addProduct(new Product("Chaussure", 15, "marque", ProductType.PETIT , 100));
+        Product.addProduct(new Product("Pomme", 1.5, "cbon", ProductType.COMESTIBLE , 150));
+        Product.addProduct(new Product("ordinateur", 15, "lenovo", ProductType.PETIT , 190));
+        Product.addProduct(new Product("camion", 15000, "bg", ProductType.GROS , 100));
     }
 }
